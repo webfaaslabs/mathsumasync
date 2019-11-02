@@ -1,0 +1,13 @@
+{
+  "name": "@webfaaslabs/mathsum",
+  "version": "0.0.1",
+  "description": "sum x + y",
+  "category": "labs",
+  "main": "src/lib",
+  "schema": "src/schema",
+  "scripts": {
+    "test": "node src/test/sum"
+  },
+  "author": "",
+  "license": "ISC"
+}
