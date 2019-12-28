@@ -1,6 +1,6 @@
 {
   "name": "@webfaaslabs/mathsumasync",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "sum x + y",
   "category": "labs",
   "main": "src/lib",
