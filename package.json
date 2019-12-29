@@ -11,9 +11,9 @@
     "test": "node dist/test/sum",
     "clean": "rm -rf dist",
     "start": "npm run clean && tsc -w",
-    "build": "tsc",
-    "publisherOriginal": "cp package.json dist && cp .npmignore dist && cd dist && npm publisher --access public",
-    "publisher": "cp package.json dist && cp .npmignore dist && cd dist && npm pack",
+    "build": "tsc && cp package.json dist && cp .npmignore dist",
+    "publisher": "cd dist && npm publisher --access public",
+    "pack": "cd dist && npm pack",
     "buildAndPublisher": "npm run build && npm run publisher"
   },
   "author": "",
