@@ -2,15 +2,19 @@
   "name": "@webfaaslabs/mathsumasync",
   "version": "0.0.1",
   "description": "sum x + y",
-  "category": "labs",
-  "main": "src/lib",
-  "bind": [
-    "math.sum",
-    "math.sum#schema",
-    "math.sum.queue1"
-  ],
+  "faas":{
+    "category": "labs",
+    "public": "true"
+  },
+  "main": "index.js",
   "scripts": {
-    "test": "node src/test/sum"
+    "test": "node dist/test/sum",
+    "clean": "rm -rf dist",
+    "start": "npm run clean && tsc -w",
+    "build": "tsc",
+    "publisherOriginal": "cp package.json dist && cp .npmignore dist && cd dist && npm publisher --access public",
+    "publisher": "cp package.json dist && cp .npmignore dist && cd dist && npm pack",
+    "buildAndPublisher": "npm run build && npm run publisher"
   },
   "author": "",
   "license": "ISC",
