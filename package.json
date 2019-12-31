@@ -12,9 +12,9 @@
     "clean": "rm -rf dist",
     "start": "npm run clean && tsc -w",
     "build": "tsc && cp package.json dist && cp .npmignore dist",
-    "publisher": "cd dist && npm publisher --access public",
+    "publish": "cd dist && npm publish --access public",
     "pack": "cd dist && npm pack",
-    "buildAndPublisher": "npm run build && npm run publisher"
+    "buildAndPublish": "npm run build && npm run publish"
   },
   "author": "",
   "license": "ISC",
